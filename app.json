@@ -1,0 +1,42 @@
+{
+    "name": "GenStickerBot",
+    "description": "to generate sticker via text by sticker is not packable by Create harshith",
+    "keywords": [
+        "telegram",
+        "best",
+        "sticker",
+        "bot",
+        "open",
+        "source"
+    ],
+    "success_url": "https://t.me/GenStickerBoT",
+    "website": "https://github.com/TeleGraMaN",
+    "repository": "https://github.com/TeleGraMaN/StickerBoT",
+    "env": {
+        "ENV": {
+            "description": "Setting this to ANYTHING will enable VARs when in ENV mode",
+            "value": "ANYTHING"
+        },
+        "TG_BOT_TOKEN": {
+            "description": "Your bot token, as a string.",
+            "required": true
+        },
+        "TG_APP_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "TG_API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        }
+    },
+    "buildpacks": [{
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
